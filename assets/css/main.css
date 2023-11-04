@@ -1716,6 +1716,12 @@ section {
   margin-bottom: 20px;
 }
 
+.service-details .service-img-fluid {
+  max-width: 75% !important;
+  height: auto !important;
+}
+
+
 .service-details h3 {
   font-size: 28px;
   font-weight: 700;
