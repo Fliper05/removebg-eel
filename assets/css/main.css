@@ -637,6 +637,9 @@ section {
   color: var(--color-primary);
 }
 
+
+
+
 /*--------------------------------------------------------------
 # About Us Section
 --------------------------------------------------------------*/
@@ -1717,8 +1720,87 @@ section {
 }
 
 .service-details .service-img-fluid {
-  max-width: 75% !important;
-  height: auto !important;
+  position: relative;
+  display: block;
+  max-width: 100%;
+}
+
+.service-img-fluid::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.3s ease;
+}
+
+.service-img-fluid:hover::after {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+
+
+.service-img-fluid:hover .bi-zoom-in {
+  display: block;
+  transform: translate(-50%, -50%) scale(1);
+  color: var(--color-primary);
+}
+
+/* Image animation handling for showcasing magnifying glass */
+.image-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 75%; /* adjust as needed */
+  height: auto; /* adjust as needed */
+}
+
+.image-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.3s ease;
+}
+
+.image-wrapper:hover::after {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.3s ease;
+}
+
+.image-wrapper:hover .overlay {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.bi-zoom-in {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  display: none;
+  color: white;
+  font-size: 2em;
+  transition: transform 0.3s ease, display 0.3s ease;
+  z-index: 2;
+}
+
+.image-wrapper:hover .bi-zoom-in {
+  display: block;
+  transform: translate(-50%, -50%) scale(1);
+  color: var(--color-primary);
 }
 
 
