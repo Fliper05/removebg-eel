@@ -647,7 +647,19 @@ section {
   font-weight: 700;
   font-size: 32px;
   font-family: var(--font-secondary);
-  color: #001f8d;
+  color: #001254;
+}
+
+.success-highlight {
+  color: #0acd20;
+}
+
+.failed-highlight {
+  color: #f00000;
+}
+
+.selected-folder {
+  color: #001973;
 }
 
 .about .content ul {
